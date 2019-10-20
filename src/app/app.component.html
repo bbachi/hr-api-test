@@ -1,3 +1,21 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <h2>Posts</h2>
+  <p>All the resouces listed here:</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>BODY</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of data; let i = index; let odd=odd; let even=even;">
+        <td>{{post.id}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.body}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
